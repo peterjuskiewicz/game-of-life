@@ -44,34 +44,36 @@ let fillTheGrid = function(grid) {
 let updateGrid = function(grid) {
 
     // temporary grid
-    let newGrid = grid;
+    let newGrid = JSON.parse(JSON.stringify(grid));
 
-    for(let i = 0; i < grid.length; i++) {
-        for(let j = 0; j < grid[i].length; j++){
-            if(i == 0 || i == grid.length - 1 || j == 0 || j == grid[i].length - 1 ) {
+
+
+    for(let i = 0; i < newGrid.length; i++) {
+        for(let j = 0; j < newGrid[i].length; j++){
+            if(i == 0 || i == newGrid.length - 1 || j == 0 || j == newGrid[i].length - 1 ) {
                 newGrid[i][j] = 0;
             } else {
 
                 // get the number of neghbours
                 let neighbours = countNeighbours(grid, i, j);
-
-
                 // make a cell alive if it has exactly 3 neighbours
-                if(grid[i][j] == 0 && neighbours == 3) {
+                if(grid[i][j] === 0 && neighbours === 3) {
                     newGrid[i][j] = 1;
+                    }
 
                 // make a living cell dead if it has more than 3 neighbours
                 // or less than 3 neighbours
-                }else if(grid[i][j] == 1 && neighbours > 3 || neighbours < 2){
+                else if(grid[i][j] === 1 && (neighbours > 3 || neighbours < 2)){
                     newGrid[i][j] = 0;
                 }
             }
-
-    grid = newGrid;
-
         }
     }
+
+    return newGrid;
 }
+
+
 
 //returns the count of 8 neighbouring cells
 

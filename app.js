@@ -50,12 +50,12 @@ function draw() {
             }
         }
     }
-    updateGrid(grid);
+    grid = updateGrid(grid);
     requestAnimationFrame(draw);
 
 
 
-    }, 20)
+    }, 50)
 
 
 
