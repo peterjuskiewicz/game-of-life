@@ -36,10 +36,9 @@ From an initial seed grid the game "evolves" one iteration at a time. An iterati
 5. Scenario: Expected game outcome for seeded grid
 - Given a game of life with the initial state…
 
-|   |   |x|   |
-|---|---|---|---|
-|   |   |x|   |
-|   |   |x|   |
+|   |x|   |
+|   |x|   |
+|   |x|   |
 
 
 
