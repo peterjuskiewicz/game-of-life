@@ -1,11 +1,12 @@
 
 
 // fuction creates and returns 2 dimensional array
-// takes 2 arguments width and height
+// takes 2 arguments width and height, throws an exception
+// if arguments are not numbers
 const makeGrid = function(width, height) {
 
     // throw an error if arguments are not numbers
-    if (typeof(width) != 'number' && typeof(height) != 'number') {
+    if (typeof(width) != 'number' || typeof(height) != 'number') {
         throw "Parameter is not a number!";
     }
 
@@ -22,7 +23,6 @@ const makeGrid = function(width, height) {
 
 // takes a 2 dimensional array as an argument and
 // fills it randomly with 1s and 0s
-
 let fillTheGrid = function(grid) {
 
     for(let i = 0; i < grid.length; i++) {
@@ -42,7 +42,6 @@ let fillTheGrid = function(grid) {
 // function that has contains the logic of the game
 // takes the 2 dimensional array as an argument and
 // updates it depending on the neighboring cells
-
  let updateGrid = function(grid) {
 
     // create the copy of the grid
@@ -76,7 +75,6 @@ let fillTheGrid = function(grid) {
 
 
 //returns the count of 8 neighbouring cells
-
 let countNeighbours = function(grid, x, y) {
 
     let count = 0;
@@ -93,6 +91,10 @@ let countNeighbours = function(grid, x, y) {
 
 }
 
-module.exports.countNeighbours = countNeighbours;
-module.exports.updateGrid = updateGrid;
+// export 2 functions for testing
+if(typeof(module) != 'undefined') {
+    module.exports.countNeighbours = countNeighbours;
+    module.exports.updateGrid = updateGrid;
+}
+
 

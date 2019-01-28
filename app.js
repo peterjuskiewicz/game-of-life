@@ -1,35 +1,43 @@
 
-// create canvas elements with height 400 and width 400
-var canvas = document.createElement("CANVAS");
+// create canvas element
+let canvas = document.createElement("CANVAS");
+
+// set width and height of the canvas
 canvas.height = 400;
 canvas.width = 400;
 
-document.body.appendChild(canvas);
 
+document.body.appendChild(canvas);
 
 // get the canvas context
 let ctx = canvas.getContext("2d");
 
-
-
 // define the size of the grid
-
-let gridWidth = 50;
-let gridHeight = 50;
+const GRID_WIDTH = 50;
+const GRID_HEIGHT = 50;
 
 //define the size of cells
+const CELL_SIZE = 10;
 
-let resolution = 10;
+//define the delay
+const DELAY_TIME = 1;
 
 let grid = [];
 
 
-grid = makeGrid(gridWidth, gridHeight);
+try {
+    grid = makeGrid(GRID_WIDTH, GRID_HEIGHT);
+} catch(e) {
+
+    cosnole.log(e);
+}
+
 
 fillTheGrid(grid);
 
 
-
+// the function takes a delay number and canvas context object as agruments
+// and draws cells on the canvas
 function draw() {
 
     setTimeout(() => {
@@ -41,21 +49,19 @@ function draw() {
     for (let i = 0; i < grid.length; i++) {
         for (let j = 0; j < grid[i].length; j++) {
 
-            let x = i * resolution;
-            let y = j * resolution;
+            let x = i * CELL_SIZE;
+            let y = j * CELL_SIZE;
 
+            // fill the cell with black colour
             if(grid[i][j] == 1) {
-                ctx.fillRect(x, y, resolution, resolution);
-
+                ctx.fillRect(x, y, CELL_SIZE, CELL_SIZE);
             }
         }
     }
     grid = updateGrid(grid);
     requestAnimationFrame(draw);
 
-
-
-    }, 1)
+    }, DELAY_TIME)
 
 
 
