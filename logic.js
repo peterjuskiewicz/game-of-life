@@ -1,3 +1,5 @@
+
+
 // fuction creates and returns 2 dimensional array
 // takes 2 arguments width and height
 const makeGrid = function(width, height) {
@@ -41,12 +43,10 @@ let fillTheGrid = function(grid) {
 // takes the 2 dimensional array as an argument and
 // updates it depending on the neighboring cells
 
-let updateGrid = function(grid) {
+ let updateGrid = function(grid) {
 
-    // temporary grid
+    // create the copy of the grid
     let newGrid = JSON.parse(JSON.stringify(grid));
-
-
 
     for(let i = 0; i < newGrid.length; i++) {
         for(let j = 0; j < newGrid[i].length; j++){
@@ -77,14 +77,12 @@ let updateGrid = function(grid) {
 
 //returns the count of 8 neighbouring cells
 
-
 let countNeighbours = function(grid, x, y) {
 
     let count = 0;
 
     for(let i = -1; i < 2; i++){
         for(let j =  -1; j < 2; j++){
-            console.log(grid[x + i][y + j]);
             count = count + grid[x + i][y +j];
         }
     }
@@ -94,3 +92,7 @@ let countNeighbours = function(grid, x, y) {
     return count;
 
 }
+
+module.exports.countNeighbours = countNeighbours;
+module.exports.updateGrid = updateGrid;
+
