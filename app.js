@@ -25,7 +25,7 @@ let grid = [];
 
 grid = makeGrid(GRID_WIDTH, GRID_HEIGHT);
 
-fillTheGrid(grid);
+fillGrid(grid);
 
 
 // the function takes a delay number and canvas context object as agruments

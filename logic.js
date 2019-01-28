@@ -23,7 +23,7 @@ const makeGrid = function(width, height) {
 
 // takes a 2 dimensional array as an argument and
 // fills it randomly with 1s and 0s
-let fillTheGrid = function(grid) {
+let fillGrid = function(grid) {
 
     for(let i = 0; i < grid.length; i++) {
         for(let j = 0; j < grid[i].length; j++) {
