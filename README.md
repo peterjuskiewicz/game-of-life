@@ -39,15 +39,23 @@ From an initial seed grid the game "evolves" one iteration at a time. An iterati
 |   |x|   |
 |---|---|---|
 |   |x|   |
-|---|---|---|
 |   |x|   |
 
 
 
-- When there are no live cells
-- Then on the next step there are still no live cells
+- When the game evolves one turn  then the next state is…
 
+|   |   |   |
+|---|---|---|
+|x|x|x|
+|   |   |   |
 
+- When the game evolves another turn  then the next state is…
+
+|   |x|   |
+|---|---|---|
+|   |x|   |
+|   |x|   |
 
 
 
