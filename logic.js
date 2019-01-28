@@ -39,7 +39,7 @@ let fillTheGrid = function(grid) {
     }
 }
 
-// function that has contains the logic of the game
+// function contains the logic of the game
 // takes the 2 dimensional array as an argument and
 // updates it depending on the neighboring cells
  let updateGrid = function(grid) {
