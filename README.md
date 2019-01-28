@@ -37,7 +37,9 @@ From an initial seed grid the game "evolves" one iteration at a time. An iterati
 - Given a game of life with the initial state…
 
 |   |x|   |
+|---|---|---|
 |   |x|   |
+|---|---|---|
 |   |x|   |
 
 
