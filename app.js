@@ -52,9 +52,6 @@ function draw() {
     requestAnimationFrame(draw);
 
     }, DELAY_TIME)
-
-
-
 }
 
 draw();
