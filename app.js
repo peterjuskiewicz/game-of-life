@@ -1,4 +1,3 @@
-
 // create canvas element
 let canvas = document.createElement("CANVAS");
 
@@ -24,14 +23,7 @@ const DELAY_TIME = 1;
 
 let grid = [];
 
-
-try {
-    grid = makeGrid(GRID_WIDTH, GRID_HEIGHT);
-} catch(e) {
-
-    cosnole.log(e);
-}
-
+grid = makeGrid(GRID_WIDTH, GRID_HEIGHT);
 
 fillTheGrid(grid);
 
@@ -41,8 +33,6 @@ fillTheGrid(grid);
 function draw() {
 
     setTimeout(() => {
-
-        console.log('drawing');
 
     ctx.clearRect(0,0, canvas.width, canvas.height)
 
