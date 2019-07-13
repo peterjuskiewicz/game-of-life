@@ -6,6 +6,8 @@
 
 The Game of Life is set in an infinite two-dimensional grid inhabited by “cells”. Every cell interacts with up to eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent.
 
+![Game of Life Screenshot](http://juskiewi.cz/projects/game-of-life/game-of-life.png)
+
 ## Scenarios
 
 From an initial seed grid the game "evolves" one iteration at a time. An iteration applies rules to the grid to determine its next state. These scenarios are:
